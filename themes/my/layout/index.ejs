@@ -1,0 +1,37 @@
+你好啊！
+
+所有页面：
+
+<% site.pages.forEach(page=> { %>
+<a href="<%- page.path %>">
+  <h2><%= page.title %>: <%= page.permalink %></h2>
+</a>
+
+<% })%>
+
+
+所有分类：
+<%- list_categories() %>
+<% site.categories.forEach(page=> {  %>
+<p><%- page.name %></p>
+<ul>
+  <% page.posts.forEach(p=>{%>
+  <li><%- p.title %></li>
+  <%}) %>
+
+</ul>
+
+<%})%>
+
+所有标签：
+<%- list_tags() %>
+<% site.tags.forEach(page=> { %>
+<p><%- page.name %></p>
+<ul>
+  <% page.posts.forEach(p=>{%>
+  <li><%- p.title %></li>
+  <%}) %>
+
+</ul>
+
+<%})%>

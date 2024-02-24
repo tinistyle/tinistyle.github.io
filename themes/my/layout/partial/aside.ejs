@@ -1,0 +1,120 @@
+<script>
+  const path = location.pathname
+  console.log(path)
+</script>
+
+<% 
+const tabList = [
+  {
+    url: "/",
+    title: "Hello",
+    icon: "icon-shouye",
+  },
+  {
+    url: "/article",
+    title: "Article",
+    icon: "icon-24gf-fileEmpty",
+  },
+  {
+    url: "/share",
+    title: "Share",
+    icon: "icon-ziyuan",
+  },
+  {
+    url: "/about",
+    title: "About",
+    icon: "icon-jurassic_user",
+  },
+]
+const otherTab = [
+  {
+    url: "/photo",
+    title: "摄影",
+    icon: "icon-sheyingyuluxiang",
+  },
+  {
+    url: "/video",
+    title: "影视",
+    icon: "icon-shejishuju",
+    // url: "https://github.com/tinistyle/design",
+  },
+  {
+    url: "/design",
+    title: "设计",
+    icon: "icon-shejishuju",
+    // url: "https://github.com/tinistyle/design",
+  },
+
+  {
+    url: "/store",
+    title: "商店",
+    icon: "icon-dianpu",
+    // url: "http://store.tinistyle.com",
+  },
+  {
+    url: "/games",
+    title: "游戏",
+    icon: "icon-iconfontyouxihudong",
+    // url: "http://game.tinistyle.com",
+  },
+]
+let current = 0
+
+
+// console.log(path)
+%>
+
+
+<script>
+  // function menuClick(index) {
+  //   let s = document.querySelectorAll(".menus li")
+  //   s.forEach(ele => ele.classList.remove("active"))
+  //   s[index].classList.toggle("active")
+  //   // 移动导航
+  //   // console.log(tabList[index].url)
+  //   // window.open(tabList[index].url, "_blank")
+  // }
+</script>
+
+<div class="flex-center my-30">
+  <img class="w-60 mr-10" src="https://tinistyle-self.oss-cn-chengdu.aliyuncs.com/logo.png" alt="" />
+  <div>
+    <h1 class="font-20 font-w-8 m-0 p-0"> <%= config.title %> </h1>
+    <span class="color-gray"> <%= config.subtitle %> </span>
+  </div>
+</div>
+
+<ul class="menus color-dgray font-w-6 font-m bb pb-20 pb-20">
+  <h3 class="font-m pl-20 mb-10 color-grey">博客</h3>
+  <% tabList.forEach((ele,index) => {%>
+  <a class="anone" href="<%= ele.url %>">
+    <li class="flex align-center tab pl-20 point <% if(is_current(ele.url)){ %> active <%}%>">
+      <div class="icon flex-center">
+        <span class="iconfont font-xxl <%= ele.icon %>"></span>
+      </div>
+      <%= ele.title %>
+    </li>
+  </a>
+
+  <%}); %>
+</ul>
+
+
+<ul class="color-dgray font-w-6 font-m py-10 ">
+  <h3 class="font-m pl-20 mb-10 color-grey">其它</h3>
+  <% otherTab.forEach(ele => {%>
+
+  <a class="anone" href="<%= ele.url %>" target="_blank">
+    <li class="flex align-center tab pl-20 point">
+      <div class="icon flex-center">
+        <span class="iconfont font-xxl <%= ele.icon %>"></span>
+      </div>
+      <%= ele.title %>
+    </li>
+  </a>
+  <%}); %>
+</ul>
+
+<p class="buttom">
+  <a class="font-10 " href="http://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备18036857号</a>
+</p>

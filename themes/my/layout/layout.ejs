@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3903785_csyaiuazjev.css">
+  <%- favicon_tag("favicon.ico") %>
+  <%- css('css/main') %>
+  <%- css('css/style') %>
+  <link rel="stylesheet" href="css/github-dark.min.css">
+</head>
+
+<body>
+  <% if(is_post()){%>
+  <%- body %>
+  <% } else {%>
+  <div class="flex">
+    <div class="aside">
+      <%- partial('partial/aside',{}, {cache: false}) %>
+    </div>
+
+    <div class="flex-1">
+      <div class="header flex justify-between align-center px-40">
+        <%- partial('partial/header',{}, {cache: true}) %>
+      </div>
+
+      <div class="main">
+        <div class="panel">
+          <%- body %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%} %>
+
+
+</body>
+<script>
+  /* ```
+  ``` */
+</script>
+
+</html>

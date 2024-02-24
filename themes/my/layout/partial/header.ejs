@@ -1,0 +1,47 @@
+<% const socialList = [
+{
+  icon: "icon-weixin",
+  name: "weixin",
+  url: "",
+},
+{
+  icon: "icon-gongzhonghao",
+  name: "gongzhonghao",
+  url: "",
+},
+{
+  icon: "icon-weibo",
+  name: "weibo",
+  url: "",
+},
+{
+  icon: "icon-github-fill",
+  name: "github",
+  url: "https://github.com/tinistyle",
+},
+] %>
+
+<script>
+  function handleSearch() {
+    // 搜索请求
+  }
+</script>
+
+<div class="w-04 position-r">
+  <input type="text" />
+  <button onclick="handleSearch()">
+    <i class="iconfont icon-sousuo"></i>
+  </button>
+</div>
+
+<div class="flex align-center show">
+  <div class="social flex mr-10">
+    <% socialList.forEach(ele=>{%>
+    <div class="w-30 h-30 flex-center radius-circle bg-main box mx-10 color-white point">
+      <i class="iconfont font-xxl mx-10 <%= ele.icon %>"></i>
+    </div>
+    <% }) %>
+
+  </div>
+  <i class="iconfont icon-youduiqi point"></i>
+</div>

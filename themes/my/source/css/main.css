@@ -1,0 +1,142 @@
+/* 清除默认 */
+
+img {
+  vertical-align: top;
+  border: none;
+}
+img,
+video {
+  max-width: 100%;
+  max-height: 100%;
+}
+body {
+  font-family: "Microsoft Yahei", "PingFang SC", "PingFang SC", SimSun,
+    "Lantinghei SC";
+  background-color: #f4f4f5;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* 布局 */
+
+/* 侧栏 */
+.aside {
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+  position: fixed;
+  /* float: left; */
+}
+.aside ul {
+  list-style: none;
+  padding-left: 0;
+  /* margin: 0; */
+}
+.aside .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px;
+}
+.aside .buttom {
+  width: 100%;
+  padding-left: 20px;
+  position: fixed;
+  bottom: 10px;
+}
+
+.aside li:hover {
+  color: #1d8fc7;
+  background-color: #f5f4f2;
+}
+
+.active {
+  color: #1d8fc7;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* 页头 */
+
+.header {
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+}
+
+.header input {
+  width: 100%;
+  height: 40px;
+  background-color: #f4f4f5;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+.header button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  background-color: #f4f4f5;
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+  transform: translate(0, -50%);
+}
+
+.show:hover .social {
+  width: 200px;
+}
+.social {
+  width: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+/* 页尾 */
+
+/* 内容 */
+.main {
+  padding-left: 250px;
+  padding-top: 80px;
+}
+
+.panel {
+  background-color: #fff;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+
+
+/* 文章 */
+.post{
+  max-width: 1200px;
+  min-width: 500px;
+  margin: 0 auto 100px;
+}
+.info span {
+  margin: 0 5px;
+  font-size: 12px;
+  color: #888;
+}
+.info span i {
+  font-size: 12px;
+}
+.info {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+

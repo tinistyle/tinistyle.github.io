@@ -1,0 +1,31 @@
+
+
+
+
+
+
+<% site.posts.forEach(post=> { %>
+
+<div class="article pt-20 pb-30 bb px-20">
+  <h1 class="font-w-6 font-xxl color-deep text-spacing-1">
+    <a class="anone" target="_blank" href="<%-post.path%>"><%- post.title %></a>
+  </h1>
+  <p class="font-m color-ddgray my-20 text-spacing-1">
+    <%- post.excerpt %>
+  </p>
+  <div class="font-sm color-gray">
+    <span class="font-sm mr-10">
+      <i class="iconfont icon-chakanmima font-sm"></i>
+      99
+    </span>
+    <span class="font-sm mx-10">
+      <i class="iconfont icon-dianzan_kuai font-sm"></i>
+      <%- time_tag(post.date) %>
+    </span>
+    <% post.tags.forEach(tag=> { %>
+    <span class="mx-5"># <%- tag.name %></span>
+    <% })%>
+  </div>
+</div>
+
+<% })%>
